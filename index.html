@@ -1,0 +1,156 @@
+---
+---
+
+<div class="subnav-container">
+    <div class="subnav">
+        <ul id="subnav">
+            <li id="what-it-is"><a href="#what-it-is" class="scrollto">What it is</a></li>
+            <li id="how-it-works"><a href="#how-it-works" class="scrollto">How it works</a></li>
+            <li id="video"><a href="#video" class="scrollto">Video</a></li>
+            <li id="instructions"><a href="#instructions" class="scrollto">Instructions</a></li>
+            <li id="alpha"><a href="#alpha" class="scrollto">Alpha program</a></li>
+            <li id="development"><a href="#development" class="scrollto">Development</a></li>
+            <li class="end"><a href="#blog-posts" class="scrollto">Blog posts</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="content-container">
+    <div class="content narrow">
+        <div class="form-container">
+          <!--  <p><i>Enter the 8-digit serial code to compare your temporary locked fingerprint with the factory reference image.</i></p> -->
+            <form class="form">
+                <input type="text" id="serial" placeholder="Enter the identifier of your package">
+                <button type="submit" id="search">Compare reference image</button>
+            </form>
+        </div>
+        <div class="content-block">
+            <figure>
+                <img src="images/tep_alpha_sealed.jpg" />
+                <figcaption>Vacuum sealed alpha prototype of our tamper-evident packaging</figcaption>
+            </figure>
+        </div>
+        <div class="content-block scroll-container" id="what-it-is">
+          <!--  <h1>What it is</h1> -->
+            <p>A packaging that significantly raises the cost of tampering during shipping or storage. The security mechanism of BitBoxTep is a temporary locked particle fingerprint which is verified via image comparison of a reference image taken prior to shipment. It is currently in alpha stage and we are in the process of iterating the design towards a beta.</p>
+            <p>Our solution aims to serve targeted industries beyond sensitive crypto devices: such as privacy and security focused smartphone manufacturers, pharma- and biotech companies, labs handling toxic or radioactive probes, narcotics or doping testlabs, dice and card manufacturers, jewels and gemstone dealers, antiques and art agencies, etc. Anywhere small scale physical goods have to be protected from being looked at, manipulated, replaced or disappearing undetected, BitBoxTep is the potential solution.</p>
+            <figure>
+                <img src="images/tep_alpha_pouch_lift.png" />
+                <figcaption>BitBoxTep pouch detachment. Particles are free to move when not vacuum sealed.</figcaption>
+            </figure>
+        </div>
+        <div class="content-block scroll-container" id="how-it-works">
+            <h1>How it works</h1>
+            <p>BitBoxTep proposes a temporary locked fingerprint consisting of spherical particles. The particles are contained in a pouch that when placed under vacuum locks the particles in place to create the temporary fingerprint. When the vacuum bag is opened, the particles mix. This makes it extremely difficult to replicate the original fingerprint.</p>
+            <div class="process">
+                <img src="images/how_tep_works.svg">
+            </div>
+            <p>You compare the reference image taken prior to shipment with the received packaging. Currently, you can visually verify that the pattern is unchanged. Eventually, a mobile app using computer vision will aid to verify the two images are similar.</p>
+        </div>
+        <div class="content-block">
+            <div id="video" class="embed-container scroll-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/WOqR1nXD1ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="content-block scroll-container" id="instructions">
+            <h1>Instructions</h1>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p class="step-content">Check that the package is a rigid plastic box consisting of two parts. There is a round particle pouch attached with velcro to the box's enclosure mechanism and the system is vacuum sealed in a transparent bag. With the exception of a few particles, all particles should be locked in place by the vacuum. Some particles within clusters might move within a small range of 1-2mm.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p class="step-content">Scan the QR code to access your reference image or visit <a href="https://tep.shiftcrypto.ch" target="_blank">https://tep.shiftcrypto.ch</a> to enter the 8-digit identifier in the text mask. Important: Check the URL carefully to make sure you are visiting the correct website.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p class="step-content">Compare the temporary locked particle fingerprints of the reference image and your packaging. They should match. You may want to take a picture of the sealed packaging for later reference.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <p class="step-content">Cut the vacuum bag open with scissors and pull the box with the attached particle pouch out of the bag.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <p class="step-content">Tilt the box gently to verify the particles move freely and mix into a loose state. If they are stuck to the pouch and don‘t mix easily, something might be wrong. In this case, please contact <a href="mailto:labs@shiftcrypto.ch">labs@shiftcrypto.ch</a></p>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <p class="step-content">Pull the particle pouch away in order to open the box. You should hear the velcro separation and feel a pull resistance normal for velcro. <br />The particles should move freely.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <p class="step-content">Smell the particle pouch and the plastic box. It should neither smell like burnt plastic, nor should you smell any strong solvents.</p>
+                </div>
+            </div>
+            <div class="instructions">
+                <p>To verify if there is a difference between your fingerprint and the reference image, we recommend going from high level to details.</p>
+                <div class="instruction">
+                    <div class="image">
+                        <img src="{{ '/images/verify_1.png' | relative_url }}" />
+                    </div>
+                    <p class="instruction-text">Are there clearly identifiable clusters?<br>Are the clusters in the same positions?</p>
+                </div>
+                <div class="instruction">
+                    <div class="image">
+                        <img src="{{ '/images/verify_2.png' | relative_url }}" />
+                    </div>
+                    <p class="instruction-text">Do empty spaces look similar?</p>
+                </div>
+                <div class="instruction">
+                    <div class="image">
+                        <img src="{{ '/images/verify_3.png' | relative_url }}" />
+                    </div>
+                    <p class="instruction-text">Do single particles match up?</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-block scroll-container" id="alpha">
+            <h1>Alpha program</h1>
+            <p>From December 2019 to January 2020 we selected a limited number of alpha testers to give us feedback on BitBoxTep. We invited them to perform various attempts to bypass the security mechanism of our first prototypes.</p>
+            <p>We have received valuable inputs on how to possibly iterate the design, what potential attacks to consider and where our community sees market potential. Despite offering a bounty for successful attacks, none of the alpha testers have managed to break in and reseal BitBoxTep with the fingerprint intact.</p>
+            <p>Our alpha testers especially liked the simple and understandable security mechanism and the clear instructions on how to verify the temporary locked fingerprint prior to opening. The majority appreciated the idea of reusability if it can be worked out to function reliably.</p>
+            <p>In addition, the alpha testers gave suggestions for improvement. The majority consider the QR code on the alpha particle pouches an unnecessary phishing danger. Also multiple participants would prefer to receive instructions and the reference image via email in the form of a shipping confirmation instead of verifying the fingerprint in an online database until there is an app available.</p>
+            <p>With regards to hardware, we have learned to look into different color concepts. For example, potentially using a bright color plastic box to make it more difficult to manipulate without the receiver noticing. <br />A first test with liquid nitrogen (-196°C) has revealed that while the particles could not be frozen to the pouch easily, the adhesive of the velcro looses cohesive strength at these temperatures.</p>
+            <figure>
+                <img src="images/liquid_nitrogen_tep.png" />
+                <figcaption>BitBoxTep in a liquid nitrogen bath to test if the particles freeze to the pouch</figcaption>
+            </figure>
+        </div>
+        <div class="content-block scroll-container" id="development">
+            <h1>Development</h1>
+            <p>We’ve prototyped a number of particle pouch designs with different materials, sizes and colors. Our main focus is to identify the best suitable material combination for the particle pouch (rigid, soft) which would lock the particles in place while ensuring that they become loose and mix when the vacuum pressure is released.</p>
+            <p>Currently we are able to lock over 95% of the particles. A handful of particles in tight clusters tend to move within a small area, which we consider acceptable.</p>
+            <p>We use industrial grade vacuum sealing equipment to make reproducible test sets. Our alpha prototypes have been tested to work in a temperature range between +40°C and -20°C. We have started with very low temperature tests using liquid nitrogen (-196°C) and also work to increase the upper temperature limitations. Lastly, we continually work on improving the duration of the vacuum seal so the particles can remain locked in position and still become loose again when the package is opened.</p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-block scroll-container" id="blog-posts">
+            <h1>Blog posts</h1>
+            <div class="blog-posts-container">
+                <div class="blog-post">
+                    <figure class="post">
+                        <a href="https://medium.com/shiftcrypto/bitboxtep-alpha-program-what-we-have-learned-cd2e1a1bbd6c" target="_blank"><img src="images/blog2.png" /></a>
+                    </figure>
+                    <h3 class="blog-post-title"><a href="https://medium.com/shiftcrypto/bitboxtep-alpha-program-what-we-have-learned-cd2e1a1bbd6c" target="_blank">BitBoxTep alpha program: what we have learned.</a></h3>
+                    <p class="blog-post-meta">Feb 6, 2020 · 3 min read</p>
+                </div>
+                <div class="blog-post">
+                    <figure class="post">
+                        <a href="https://medium.com/shiftcrypto/an-introduction-to-bitboxtep-our-new-tamper-evident-packaging-8fa06d983c32" target="_blank"><img src="images/blog1.png" /></a>
+                    </figure>
+                    <h3 class="blog-post-title"><a href="https://medium.com/shiftcrypto/an-introduction-to-bitboxtep-our-new-tamper-evident-packaging-8fa06d983c32" target="_blank">An introduction to BitBoxTep. Our new tamper-evident packaging.</a></h3>
+                    <p class="blog-post-meta">Nov 20, 2019 · 4 min read</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#search").click(() => {
+        window.location = "/" + $("#serial").val();
+        return false; // Suppress the default action of the form.
+    });
+</script>

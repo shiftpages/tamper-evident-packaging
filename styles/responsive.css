@@ -1,0 +1,81 @@
+@media screen and (max-width: 678px) {
+
+    /* GENERIC */
+    p {
+        font-size: 16px;
+    }
+
+    .hide-on-small {
+        display: none;
+    }
+    /* GENERIC END */
+
+    /* NAV */
+    .gradient-layer {
+        background: linear-gradient(to right, #FFFFFF 50%, transparent);
+    }
+
+    .logo {
+        max-width: 240px;
+    }
+    /* NAV END */
+
+    /* FORMS */
+    .form {
+        flex-direction: column;
+    }
+
+    .form input {
+        margin-bottom: 15px;
+    }
+
+    .form input,
+    .form button {
+        width: 100%;
+        min-height: 52px;
+    }
+    /* FORMS END */
+
+    /* STEPS */
+    .steps {
+        margin-top: 40px;
+    }
+    /* STEPS END */
+
+    /* INSTRUCTIONS */
+    .instructions {
+        margin-top: 60px;
+    }
+
+    .instruction .image {
+        min-width: 168px;
+        width: 168px;
+    }
+    /* INSTRUCTIONS END */
+
+    /* FOOTER */
+    .footer-container {
+        padding: calc(var(--heightDifference) * 1.4) 20px 30px 20px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+    /* FOOTER END */
+
+    .blog-posts-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .blog-post {
+        width: 100%;
+    }
+
+    .blog-posts-container > div:first-child {
+        margin-bottom: 20px;
+    }
+
+}

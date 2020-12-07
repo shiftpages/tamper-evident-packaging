@@ -1,0 +1,78 @@
+---
+---
+
+<div class="content-container">
+    <div class="content narrow">
+        <img id="package" />
+        <p style="text-align: center;">Your reference image <span class="color-blue reference-id"></span> was taken by <span class="color-blue">Shift</span> on <span id="last-modified" class="color-blue"></span>.</p>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <p class="step-content">Check that the package you received is a rigid plastic box consisting of two parts. There is a round particle pouch attached with velcro to the box's enclosure mechanism and the system is vacuum sealed in a transparent bag. With the exception of a few particles, all particles should be locked in place by the vacuum. Some particles within clusters might move within a small range of 1-2mm.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <p class="step-content">Scan the QR code to access your reference image or visit <a href="https://tep.shiftcrypto.ch" target="_blank">https://tep.shiftcrypto.ch</a> to enter the 8-digit serial code in the text mask. Important: Check the URL carefully to make sure you are visiting the correct website.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <p class="step-content">Compare the temporary locked particle fingerprints of the reference image and your packaging. They should match. You may want to take a picture of the sealed packaging for later reference.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <p class="step-content">Cut the vacuum bag open with scissors and pull the box with the attached particle pouch out of the bag.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <p class="step-content">Tilt the box gently to verify the particles move freely and mix into a loose state. If they are stuck to the pouch and don‘t mix easily, something might be wrong with your particle pouch. In this case, please contact <a href="mailto:labs@shiftcrypto.ch">labs@shiftcrypto.ch</a></p>
+            </div>
+            <div class="step">
+                <div class="step-number">6</div>
+                <p class="step-content">Pull the particle pouch away in order to open the box. You should hear the velcro separation and feel a pull resistance normal for velcro. The particles should move freely.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">7</div>
+                <p class="step-content">Smell the particle pouch and the plastic box. It should neither smell like burnt plastic, nor should you be able to smell any strong solvents.</p>
+            </div>
+        </div>
+        <div class="instructions">
+            <p>To verify if there is a difference between your fingerprint and the reference image, we recommend going from high level to details.</p>
+            <div class="instruction">
+                <div class="image">
+                    <img src="{{ '/images/verify_1.png' | relative_url }}" />
+                </div>
+                <p class="instruction-text">Are there clearly identifiable clusters?<br>Are the clusters in the same positions?</p>
+            </div>
+            <div class="instruction">
+                <div class="image">
+                    <img src="{{ '/images/verify_2.png' | relative_url }}" />
+                </div>
+                <p class="instruction-text">Do empty spaces look similar?</p>
+            </div>
+            <div class="instruction">
+                <div class="image">
+                    <img src="{{ '/images/verify_3.png' | relative_url }}" />
+                </div>
+                <p class="instruction-text">Do single particles match up?</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    if (window.location.pathname.match(/^\/[0-9a-z]+$/)) {
+        $("#package").on("error", () => { window.location = "/"; });
+        const pathWithoutSuffix = "packages/" + window.location.pathname.substring(1);
+        $("#package").attr("src", pathWithoutSuffix + ".jpg");
+
+        $.ajax({
+            url : pathWithoutSuffix + ".txt",
+            dataType: "text",
+            success : function(data) {
+                $("#last-modified").text(data);
+            }
+        });
+    } else {
+        window.location = "/";
+    }
+</script>
